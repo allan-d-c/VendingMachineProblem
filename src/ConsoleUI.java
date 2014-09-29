@@ -21,6 +21,8 @@ public class ConsoleUI implements VendingMachine.VendingUI
 	@Override
 	public void showTotalPaymentsAs(int paymentsSoFar) 
 	{
+		// Self-critique: avoid string concatenation like this. 
+		// Use string formatting (better for memory usage and i18n)
 		out.println("Total payments so far: " + paymentsSoFar);
 	}
 

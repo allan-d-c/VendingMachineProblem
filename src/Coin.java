@@ -7,13 +7,16 @@
  * We are not worrying about non-US coins and are trying to minimize our assumption
  * that we are using US coins; we don't want client code to assume US coins.
  * 
- * Note: due to laziness, we are foregoing unit testing this class.
+ * With apologies, due to laziness/lack of time, we are foregoing unit testing 
+ * of this and other low level classes.
  * 
  * @author ac
  *
  */
 public class Coin
 {
+	// Self-critique: probable internationalization issues here. Resource bundles!	 
+
 	public final static Coin PENNY = new Coin("Penny", 1);
 	public final static Coin NICKEL = new Coin("Nickel", 5);
 	public final static Coin DIME = new Coin("Dime", 10);
@@ -26,6 +29,10 @@ public class Coin
 	private String myName;
 	private int myValue;
 	
+	// Private constructor is a common idiom used to control the population
+	// of instances. This is usually coupled with a builder or with a fixed
+	// number of final instances, as is done above.
+	//
 	private Coin(String name, int price)
 	{
 		myName = name;

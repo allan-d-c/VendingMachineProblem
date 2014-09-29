@@ -9,7 +9,10 @@ public class VendingMachine
 {
 	/** ------------------------------------------------------------------
 	 * Note that a complete abstraction includes the errors, meaning throw
-	 * exceptions that match the abstraction. This also helps with unit testing.
+	 * exceptions that match the abstraction.
+	 * 
+	 * See the VendingMachineTest unit tests on how this can make the test
+	 * expectations clearer.
 	 *
 	 */
 	@SuppressWarnings("serial")
@@ -98,6 +101,9 @@ public class VendingMachine
 	{		
 		myPayments.addAll(Arrays.asList(coins));
 
+		// Self-critique: relationship between the paymentsSoFar and the coin set.
+		// Probably need to tell UI about the current coin set for better presentation.
+		
 		int paymentsSoFar = Coinage.sumOf(myPayments);		
 		myUI.showTotalPaymentsAs(paymentsSoFar);
 	}
@@ -106,6 +112,8 @@ public class VendingMachine
 	{
 		return choose(product.getName());
 	}
+	
+	// Self-critique: probably should not make this version public. Make client code specify product directly.
 	
 	public List<Coin> choose(String productName)
 	{		

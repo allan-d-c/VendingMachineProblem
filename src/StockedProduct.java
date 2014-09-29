@@ -47,6 +47,7 @@ public class StockedProduct
 	 */
 	public StockedProduct split(int quantity)
 	{
+		// Self-critique: add a Preconditions.isPositive() to improve readability and failure modes 
 		Preconditions.isTrue(quantity >= 0);
 		
 		if (quantity > myQuantity)

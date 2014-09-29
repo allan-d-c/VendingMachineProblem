@@ -16,6 +16,8 @@ public class Product
 	
 	public Product(String name, int price)
 	{
+		// Note use of preconditions is part of "Programming By Contract" (google Bertand Meyer)
+		
 		Preconditions.isSubstantial(name);
 		Preconditions.isTrue(price >= 0);
 		
@@ -28,6 +30,9 @@ public class Product
 		return myName;
 	}
 	
+	// Self-critique: there is a connection between the int price and the int value in coins.
+	// This could be made clearer.
+
 	public int getPrice()
 	{
 		return myPrice;

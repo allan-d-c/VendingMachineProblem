@@ -5,7 +5,8 @@
  * 
  * Note that we are ignoring i18n issues by embedding English strings.
  * 
- * Note there is a Google Guava class that can do some of this should we use that library.
+ * Note there is a Google Guava class and an Apache Commons class that can do 
+ * some of this should we use either of those libraries.
  *
  */
 public class Preconditions 
@@ -18,6 +19,9 @@ public class Preconditions
 
 	static void areTrue(boolean... conditions)
 	{
+		// Self-critique: for performance, we could do all the testing first and return on success, 
+		// avoiding building the string in happy path. 
+
 		StringBuilder sb = new StringBuilder();
 		
 		for (boolean condition : conditions)
