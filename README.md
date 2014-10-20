@@ -6,7 +6,7 @@ two hour time limit placed on implementing the solution. At the time, I decided 
 exercise myself, as a feasibility check on the problem restrictions and scope, and that effort
 is the contents of this repository. 
 
-This was completed in the two hour time limit. I have not modified the code after that, so it
+This was completed in the **two hour time limit**. I have **not modified** the code after that, so it
 shows the state with that amount of effort. I have gone back and done a self-critique, which
 you can find as in-line comments in the code.
 
@@ -33,6 +33,8 @@ are not here:
 
 Commentary
 ----------
+
+The best place to start is with VendingMachineTest.
 
 Design of a vending machine is a common interview-related problem. The point of this is to 
 demonstrate some minimal knowledge of abstraction and design. This is the chance for the candidate
