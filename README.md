@@ -30,6 +30,7 @@ are not here:
 * Use of multi-threading to account for menuing and controller activity
 * More detailed breakdown of behavior at the level of individual buttons
 * Use of events and states as a more abstract means of managing behavior
+* Use a package heirarchy and production/test folder structure
 
 Commentary
 ----------
