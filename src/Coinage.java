@@ -38,6 +38,7 @@ public class Coinage
 	 * an empty coin collection as below. This can improve the readability of client
 	 * code and can help hide the collection type.
 	 */
+	 // Self-critique: should use Collections.unmodifiableList() below.
 	public static final List<Coin> NOTHING = new ArrayList<Coin>();
 
 	public static List<Coin> newEmpty()
